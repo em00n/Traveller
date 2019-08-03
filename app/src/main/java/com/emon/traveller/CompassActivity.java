@@ -28,6 +28,9 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compass);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
+
         //
         image = (ImageView) findViewById(R.id.imageViewCompass);
 
@@ -60,6 +63,15 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         // get the angle around the z-axis rotated
         float degree = Math.round(event.values[0]);
 
+        if (String.valueOf(degree).equals("270.0")){
+            tvHeading.setText("West");
+        }else if (String.valueOf(degree).equals("0.0")){
+            tvHeading.setText("North");
+        }else if (String.valueOf(degree).equals("90.0")){
+            tvHeading.setText("East");
+        }else if (String.valueOf(degree).equals("180.0")){
+            tvHeading.setText("South");
+        }else
         tvHeading.setText("Heading: " + Float.toString(degree) + " degrees");
 
         // create a rotation animation (reverse turn degree degrees)

@@ -60,6 +60,9 @@ public class BlogActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
+
         mAuth = FirebaseAuth.getInstance();
         //recyclerview
         recyclerView = findViewById(R.id.recycler_view);

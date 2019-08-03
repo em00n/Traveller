@@ -69,6 +69,8 @@ public class AddBlogdataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_blogdata);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
 
         titleET = findViewById(R.id.titleEDT);
         discripET = findViewById(R.id.discripEDT);

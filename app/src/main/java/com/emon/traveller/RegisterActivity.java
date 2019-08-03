@@ -63,6 +63,8 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
 
         mEmailEdit = (EditText) findViewById(R.id.email);
         mPasswordEdit = (EditText) findViewById(R.id.password);

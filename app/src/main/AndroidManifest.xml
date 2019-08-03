@@ -35,12 +35,12 @@
         <activity android:name=".AddCostActivity" />
         <activity
             android:name=".CostActivity"
-            android:theme="@style/AppThemeNoAction" />
+            android:theme="@style/AppTheme" />
         <activity android:name=".BudjetaddActivity" />
         <activity
             android:name=".RegisterActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppThemeNoAction">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -58,7 +58,9 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps">
+
+        </activity>
     </application>
 
 </manifest>

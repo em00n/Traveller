@@ -60,6 +60,8 @@ public class BlogPostActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blog_post);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
         mAuth = FirebaseAuth.getInstance();
 
         discripTv = findViewById(R.id.postdiscripTv);

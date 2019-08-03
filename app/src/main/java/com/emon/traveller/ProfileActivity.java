@@ -39,6 +39,9 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
+
         reference = FirebaseDatabase.getInstance().getReference("Traveller").child("Profile");
         myRecyclerView = findViewById(R.id.myPost_recyclerView);
 

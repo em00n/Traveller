@@ -23,6 +23,9 @@ public class ForgetPassActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forget_pass);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
+
         editText = findViewById(R.id.emailforget);
         button = findViewById(R.id.reset_btn);
         mAuth = FirebaseAuth.getInstance();

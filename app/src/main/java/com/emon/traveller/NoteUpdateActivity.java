@@ -25,6 +25,9 @@ public class NoteUpdateActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_update);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
+
         subjectet = findViewById(R.id.unoteSubEt);
         detailset = findViewById(R.id.unoteDetailEt);
         updateBtn = findViewById(R.id.unteupdateBTN);

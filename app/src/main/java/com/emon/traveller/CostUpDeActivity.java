@@ -34,6 +34,9 @@ public class CostUpDeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cost_up_de);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
+
         resionEt = findViewById(R.id.resonupET);
         amountEt = findViewById(R.id.amountupET);
         update = findViewById(R.id.updateCostBTN);

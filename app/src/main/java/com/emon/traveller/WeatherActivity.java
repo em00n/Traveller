@@ -49,7 +49,8 @@ public class WeatherActivity extends AppCompatActivity {
         textView4 = findViewById(R.id.t4);
         imageView2 = findViewById(R.id.i2);
         imageView2.setImageResource(R.drawable.celsius);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
 
         openWeatherMap = WeatherApiClient.getClient().create(OpenWeatherMap.class);
 

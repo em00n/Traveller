@@ -38,6 +38,7 @@ public class NoteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_note);
         addNote = findViewById(R.id.notefloting);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
 
         sharedPreferences = getApplicationContext().getSharedPreferences("language", MODE_PRIVATE);
         db = new DBHandeler(this);

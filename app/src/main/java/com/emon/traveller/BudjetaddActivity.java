@@ -24,6 +24,9 @@ public class BudjetaddActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_budjetadd);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
+
         editText = findViewById(R.id.budjetEt);
         button = findViewById(R.id.addBudjet);
         sharedPreferences = getApplicationContext().getSharedPreferences("db", MODE_PRIVATE);

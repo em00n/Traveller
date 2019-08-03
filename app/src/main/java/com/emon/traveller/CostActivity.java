@@ -40,6 +40,9 @@ public class CostActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cost);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
+
         addcostFAButton = findViewById(R.id.costfloting);
         balanceTv = findViewById(R.id.balanceTV);
         costTv = findViewById(R.id.costTV);
@@ -48,9 +51,6 @@ public class CostActivity extends AppCompatActivity {
         editor = sharedPreferences.edit();
         db = new DBHandeler(getApplicationContext());
 
-        // Set up the action toolbar
-        androidx.appcompat.widget.Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
 
         data();

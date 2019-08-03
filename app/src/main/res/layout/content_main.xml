@@ -70,8 +70,8 @@
                             android:layout_height="0dp"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
-                            android:scaleType="center"
-                            android:src="@drawable/ic_launcher_foreground" />
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/cost" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -112,8 +112,8 @@
                             android:layout_height="0dp"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
-                            android:scaleType="center"
-                            android:src="@drawable/ic_launcher_foreground" />
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/blogging" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -161,8 +161,8 @@
                             android:layout_height="0dp"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
-                            android:scaleType="center"
-                            android:src="@drawable/ic_launcher_foreground" />
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sun" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -202,8 +202,8 @@
                             android:layout_height="0dp"
                             android:layout_marginTop="5dp"
                             android:layout_weight="1"
-                            android:scaleType="center"
-                            android:src="@drawable/ic_launcher_foreground" />
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/writing" />
 
                         <TextView
                             android:layout_width="match_parent"

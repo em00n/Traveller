@@ -32,6 +32,8 @@ public class AddNoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_note);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
         subET = findViewById(R.id.noteSubET);
         detailET = findViewById(R.id.noteDetailET);
         button = findViewById(R.id.addNoteBTN);

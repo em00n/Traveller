@@ -33,6 +33,9 @@ public class AddCostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_cost);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
+
         reasonET = findViewById(R.id.reasonET);
         amountET = findViewById(R.id.amountET);
         button = findViewById(R.id.addcostBTN);
