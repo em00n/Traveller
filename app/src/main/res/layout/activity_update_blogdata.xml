@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".UpdateBlogdataActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/c1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:elevation="7dp"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/updepropicCIv"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_launcher_background" />
+
+                    <TextView
+                        android:id="@+id/updepronameTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/updepropicCIv"
+                        android:background="@drawable/buttonback"
+                        android:paddingLeft="5dp"
+                        android:text="name : "
+                        android:textColor="#000"
+                        android:textSize="20dp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/updedateTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/updepronameTV"
+                        android:layout_toRightOf="@+id/updepropicCIv"
+                        android:background="@drawable/buttonback"
+                        android:paddingLeft="5dp"
+                        android:text="date : "
+                        android:textColor="#000"
+                        android:textSize="10dp"
+                        android:textStyle="normal" />
+                </RelativeLayout>
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#a9a6a6" />
+
+                <EditText
+                    android:id="@+id/titleET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:hint="Title"
+                    android:minHeight="80dp"
+                    android:padding="8dp"
+                    android:textSize="20dp" />
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#a9a6a6" />
+
+                <EditText
+                    android:id="@+id/discripET"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/edit_background"
+                    android:gravity="center"
+                    android:hint="Description"
+                    android:minHeight="80dp"
+                    android:padding="8dp"
+                    android:textSize="20dp" />
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="#a9a6a6" />
+
+                <ImageView
+                    android:id="@+id/picupde"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_below="@+id/c2"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_launcher_background" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layout_below="@+id/c1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="#a9a6a6" />
+
+        <Button
+            android:id="@+id/updateBTN"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonbg"
+            android:padding="6dp"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/deletBTN"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonbg"
+            android:padding="6dp"
+            android:text="Delete"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="7dp"
+    tools:context=".CostUpDeActivity">
+
+    <EditText
+        android:id="@+id/resonupET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/edit_background"
+        android:gravity="center"
+        android:hint="Reason"
+        android:minHeight="60dp"
+        android:padding="8dp"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/amountupET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edit_background"
+        android:gravity="center"
+        android:hint="Amount"
+        android:inputType="number"
+        android:minHeight="60dp"
+        android:padding="8dp"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/updateCostBTN"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonbg"
+        android:padding="6dp"
+        android:text="update"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/deleteCostBTN"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/buttonbg"
+        android:padding="6dp"
+        android:text="delete"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="25sp" />
+
+</LinearLayout>
