@@ -137,8 +137,7 @@ public class AddBlogdataActivity extends AppCompatActivity {
                     final String sdownload_url = String.valueOf(downloadUrl);
 
 
-//                    dataReference.push()  //use this method to creat unik id
-//                            .setValue(sdownload_url);
+
                     if (!TextUtils.isEmpty(title) && !TextUtils.isEmpty(discrip)) {
                         //  Toast.makeText(AddBlogdataActivity.this, "add", Toast.LENGTH_SHORT).show();
 

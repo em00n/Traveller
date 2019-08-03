@@ -66,15 +66,11 @@ public class BlogActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
 
-//        mDatabaseUsers = FirebaseDatabase.getInstance().getReference().child("Users").child(mCurrentUser.getUid());
-//        mCurrentUser = mAuth.getCurrentUser();
-//        muid=mCurrentUser.getUid();
         muid = mAuth.getCurrentUser().getUid();
         //firebase
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Traveller").child("Blog");
         databaseReference.keepSynced(true);
-
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
