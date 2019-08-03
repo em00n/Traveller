@@ -221,19 +221,46 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_home) {
+        if (id == R.id.nav_profile) {
             startActivity(new Intent(MainActivity.this, ProfileActivity.class));
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_map) {
             startActivity(new Intent(MainActivity.this, MapsActivity.class));
 
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_tools) {
-
-        } else if (id == R.id.nav_share) {
-
+        } else if (id == R.id.nav_compus) {
+            startActivity(new Intent(MainActivity.this, CompassActivity.class));
+        } else if (id == R.id.nav_cost) {
+            int check = sharedPreferences.getInt("check", 0);
+            if (check > 0) {
+                startActivity(new Intent(MainActivity.this, CostActivity.class));
+            } else {
+                Intent intent = new Intent(MainActivity.this, BudjetaddActivity.class);
+                intent.putExtra("cb", "add");
+                startActivity(intent);
+            }
+        } else if (id == R.id.nav_blog) {
+            startActivity(new Intent(MainActivity.this, BlogActivity.class));
+        } else if (id == R.id.nav_weather) {
+            startActivity(new Intent(MainActivity.this, WeatherActivity.class));
+        } else if (id == R.id.nav_note) {
+            startActivity(new Intent(MainActivity.this, NoteActivity.class));
+        } else if (id == R.id.nav_logout) {
+            FirebaseAuth.getInstance().signOut();
+            finish();
+            Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+            startActivity(intent);
+            return true;
         } else if (id == R.id.nav_send) {
-
+            Intent feedbackEmail = new Intent(Intent.ACTION_SEND);
+            feedbackEmail.setType("text/email");
+            feedbackEmail.putExtra(Intent.EXTRA_EMAIL, new String[]{"emonhassan042@gmail.com"});
+            feedbackEmail.putExtra(Intent.EXTRA_SUBJECT, "Feedback");
+            startActivity(Intent.createChooser(feedbackEmail, "Send Feedback:"));
+        } else if (id == R.id.nav_share) {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, getApplicationInfo() + "Share.");
+            sendIntent.setType("text/plain");
+            startActivity(sendIntent);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
