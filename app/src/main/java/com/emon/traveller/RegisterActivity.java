@@ -63,7 +63,6 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.headerbg));
 
         mEmailEdit = (EditText) findViewById(R.id.email);
@@ -89,14 +88,15 @@ public class RegisterActivity extends AppCompatActivity {
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pd = new ProgressDialog(RegisterActivity.this);
-                pd.setTitle("Please wait");
-                pd.setMessage("Loading....");
-                pd.show();
+
                 name = mNameET.getText().toString().trim();
                 String email = mEmailEdit.getText().toString().trim();
                 String password = mPasswordEdit.getText().toString().trim();
-                if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+                if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)&& filepath != null) {
+                    pd = new ProgressDialog(RegisterActivity.this);
+                    pd.setTitle("Please wait");
+                    pd.setMessage("Loading....");
+                    pd.show();
                     mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
@@ -139,6 +139,8 @@ public class RegisterActivity extends AppCompatActivity {
                             }
                         }
                     });
+                }else {
+                    Toast.makeText(getApplicationContext(), "Please fill Registration from", Toast.LENGTH_LONG).show();
                 }
             }
         });

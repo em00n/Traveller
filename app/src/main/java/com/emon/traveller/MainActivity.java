@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity
     String name, prourl, uid;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    DBHandeler db;
     List<SlideModel> urls;
     int position = 0;
 
@@ -192,6 +193,7 @@ public class MainActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

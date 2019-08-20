@@ -280,7 +280,7 @@ public class DBHandeler extends SQLiteOpenHelper {
 
 
     //AllDelete Query
-    public void noteDatadelete() {
+    public void allNoteDatadelete() {
         String deleteQuery = "DELETE FROM " + TABLE_NOTE;
         SQLiteDatabase db = this.getReadableDatabase();
         db.execSQL(deleteQuery);

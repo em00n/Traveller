@@ -111,7 +111,7 @@ public class NoteActivity extends AppCompatActivity {
 
     private void deleteAllDB() {
         db = new DBHandeler(getApplicationContext());
-        db.noteDatadelete();
+        db.allNoteDatadelete();
         finish();
     }
 
